@@ -1,0 +1,117 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|x64">
+      <Configuration>Debug</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Hybrid|x64">
+      <Configuration>Hybrid</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|x64">
+      <Configuration>Release</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectName>CoolPicker_2024</ProjectName>
+    <ProjectGuid>{8DF6C2BA-31B5-4D54-9CEE-E5A788A243F4}</ProjectGuid>
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <MaxSDK>$(ADSK_3DSMAX_SDK_2024)</MaxSDK>
+    <WindowsTargetPlatformVersion>10.0.19041.0</WindowsTargetPlatformVersion>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <Import Project="$(MaxSDK)\ProjectSettings\PropertySheets\3dsmax.general.project.settings.props" />
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="PropertySheets">
+    <Import Project="$(MaxSDK)\ProjectSettings\PropertySheets\3dsmax.cpp.props" />
+  </ImportGroup>
+  <PropertyGroup>
+    <_ProjectFileVersion>10.0.30319.1</_ProjectFileVersion>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">$(ADSK_3DSMAX_x64_2024)\plugins\</OutDir>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='Hybrid|x64'">$(ADSK_3DSMAX_x64_2024)\plugins\</OutDir>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='Release|x64'">$(ProjectDir)Build\3DSMAX_2024\</OutDir>
+    <IntDir>$(ProjectDir)Build\log\$(ProjectName).$(PlatformShortName)\</IntDir>
+    <TargetName>CoolPick_V2</TargetName>
+    <TargetExt>.dlu</TargetExt>
+    <PostBuildEventUseInBuild Condition="'$(Configuration)|$(Platform)'=='Hybrid|x64'">false</PostBuildEventUseInBuild>
+    <PostBuildEventUseInBuild Condition="'$(Configuration)|$(Platform)'=='Release|x64'">false</PostBuildEventUseInBuild>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <PostBuildEventUseInBuild>false</PostBuildEventUseInBuild>
+  </PropertyGroup>
+  <ItemDefinitionGroup>
+    <ClCompile>
+      <WholeProgramOptimization>false</WholeProgramOptimization>
+      <PreprocessorDefinitions>_USRDLL;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>$(MaxSdkInc);%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <WarningLevel>Level3</WarningLevel>
+      <AdditionalOptions Condition="'$(Configuration)|$(Platform)'=='Hybrid|x64'">/we4267 /we4311 /we4312 %(AdditionalOptions)</AdditionalOptions>
+      <AdditionalOptions Condition="'$(Configuration)|$(Platform)'=='Release|x64'">/we4267 /we4311 /we4312 %(AdditionalOptions)</AdditionalOptions>
+    </ClCompile>
+    <Link>
+      <AdditionalLibraryDirectories>$(MaxSdkLib);%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <AdditionalDependencies>comctl32.lib;bmm.lib;core.lib;geom.lib;gfx.lib;mesh.lib;maxutil.lib;maxscrpt.lib;gup.lib;paramblk2.lib;msimg32.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <ModuleDefinitionFile>CoolPicker\CoolPick.def</ModuleDefinitionFile>
+      <GenerateDebugInformation Condition="'$(Configuration)|$(Platform)'=='Release|x64'">false</GenerateDebugInformation>
+      <BaseAddress Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+      </BaseAddress>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <ClCompile Include="CoolPicker\CoolPick.cpp" />
+    <ClCompile Include="CoolPicker\CoolPicker.cpp" />
+    <ClCompile Include="CoolPicker\CoolPickerDlg.cpp" />
+    <ClCompile Include="CoolPicker\CoolPickerModelessDlg.cpp" />
+    <ClCompile Include="CoolPicker\CoolPickerProcedure.cpp" />
+    <ClCompile Include="CoolPicker\DllEntry.cpp" />
+    <ClCompile Include="CoolPicker\MinMax.cpp" />
+    <ClCompile Include="CoolPicker\misc_graphics_functions.cpp" />
+    <ClCompile Include="CoolPicker\IColMode.cpp" />
+    <ClCompile Include="CoolPicker\IColRamp.cpp" />
+    <ClCompile Include="CoolPicker\IColSwatch.cpp" />
+    <ClCompile Include="CoolPicker\IPickerMixer.cpp" />
+    <ClCompile Include="CoolPicker\IPickerPlane.cpp" />
+    <ClCompile Include="CoolPicker\IPickerTriCircle.cpp" />
+    <ClCompile Include="CoolPicker\RGB_CMYK_ConversionFNS.cpp" />
+    <ClCompile Include="CoolPicker\RGB_HSV_ConversionFNS.cpp" />
+    <ClCompile Include="CoolPicker\RGB_LIQ_ConversionFNS.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="CoolPicker\CoolPick.def" />
+    <None Include="CoolPicker\resource\big.bmp" />
+    <None Include="CoolPicker\resource\cursor1.cur" />
+    <None Include="CoolPicker\resource\FlyingPot.gif" />
+    <None Include="CoolPicker\resource\plane.bmp" />
+    <None Include="README.md" />
+    <None Include="CoolPicker\resource\setback.ico" />
+    <None Include="version_history.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <ResourceCompile Include="CoolPicker\CoolPick.rc" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="CoolPicker\CoolPick.h" />
+    <ClInclude Include="CoolPicker\CoolPicker.h" />
+    <ClInclude Include="CoolPicker\CoolPickerDlg.h" />
+    <ClInclude Include="CoolPicker\CoolPickerModelessDlg.h" />
+    <ClInclude Include="CoolPicker\CoolPickerProcedure.h" />
+    <ClInclude Include="CoolPicker\initialize_coolpick_windows.h" />
+    <ClInclude Include="CoolPicker\MinMax.h" />
+    <ClInclude Include="CoolPicker\misc_graphics_functions.h" />
+    <ClInclude Include="CoolPicker\resource.h" />
+    <ClInclude Include="CoolPicker\RGB_CMYK_ConversionFNS.h" />
+    <ClInclude Include="CoolPicker\RGB_HSV_ConversionFNS.h" />
+    <ClInclude Include="CoolPicker\RGB_LIQ_ConversionFNS.h" />
+    <ClInclude Include="CoolPicker\global_constants.h" />
+    <ClInclude Include="CoolPicker\global_options.h" />
+    <ClInclude Include="CoolPicker\IColMode.h" />
+    <ClInclude Include="CoolPicker\IColRamp.h" />
+    <ClInclude Include="CoolPicker\IColSwatch.h" />
+    <ClInclude Include="CoolPicker\IPickerMixer.h" />
+    <ClInclude Include="CoolPicker\IPickerPlane.h" />
+    <ClInclude Include="CoolPicker\IPickerTriCircle.h" />
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+</Project>

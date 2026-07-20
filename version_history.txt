@@ -1,0 +1,75 @@
+Version 2.3.1 April 2010 DB
+	Fixed a bug that caused problems with the Slate Material Editor in Max 2011
+
+Version 2.3 February 2009 DB
+	Fixed a bug in the Mixer with gamma correction enabled.
+	Fixed picking from the screen when the values are set up to 0-100.
+	When gamma correction is enabled, pixels picked from the screen are now converted to linear gamma so that they render as seen on the screen.
+	Renamed the screen picker button to make it a bit more obvious how it works.
+
+Version 2.2 January 2009 DB
+	Fixed Gamma correction so that it works correctly in the picker.
+	Fixed a problem with Alpha values and mental ray.
+	Completely reworked the YCbCr conversion. The old version didn't really work properly.
+	Added support for the Object Color dialog.
+	Fixed a couple of bugs with floating point colors.
+        Completely disabled the Alpha controls when not in floating point mode.
+
+Version 2.1.1 November 2006 CJ
+	Added exposure for Gamma correction right in the color picker itself. This
+	feature may have to be played around with. 
+	Broke up coolpick.cpp up into many chunks. Before the file was way over 2000
+	lines long. I created coolpicker.cpp, coolpickerdlg.cpp coolpickermodelessdlg.cpp
+	and coolpickerprocedure.cpp. As you can tell I really dislike large code files
+	as large files makes it very hard to maintain, and edit them. So here's to
+	small files! The only thing is just to get it to compile I had to tightly couple
+	the header files. YUCK!! Future work should include decoupling the header files
+	so things will compile quicker.
+
+Version 2.1 October 2006 CJ
+	Fixed a string problem in Coolpick.cpp. This was a fallout of me changing all
+	the string functions to the secure versions. Fixed a call where strcat_s was trying
+	to operate on a TSTR instead of a LPCSTR.
+	
+Version 2.1 Aug - Sept 2006 CJ
+	Big changes here. This involved a port to 3dsMax 9, for 64 and 32 bit 
+	configurations. I tried to clean up the code, for instance by using safer 
+	string functions, and moving to warning level 4. However it is impossible to compile
+	cleanly without warnings at level 4 because the Max SDK only compiles at 
+	warning level 3. Here's hoping for a better day with the Max SDK.
+	
+Version 2.0.4 Nov 24-25 2005 CJ
+	Changed the screen picker functionality from a point and click approach
+	to a click and drag approach. With the new click and drag approach, the
+	color is continuously sampled and the color in the picker is continously
+	updated as well.
+	
+Version 2.0.3 Nov 24-25 2005 CJ
+	Reorganized all the code files which were in control.h / .cpp and 
+	coolpick.h / cpp.
+	I got rid of control.h / .cpp and moved all the classes into their
+	own header and source files. This was no small task as control.h and
+	control.cpp were huge files. 
+	I totally overhauled coolpick.h. It now only contains header files now.
+	I pretty much left coolpick.cpp alone, as I only changed a few declarations
+	at the top of it.
+	I also fixed the graphics for the flyout buttons as they didn't look 
+	good with dark color themes in 3ds max. Now they look good, since the
+	text on the buttons now has no anti-aliasing.
+	
+Version 2.0.2 Nov 22 2005 CJ
+	Finished implementing the cursor so it always is changed, even when
+	it leaves the 3ds max window.
+	
+Version 2.0.1 Nov 20 2005 CJ
+	Added functionality to pick a color from a sampled screen pixel
+	anywhere on the screen. This was done in two parts. First adding
+	a button control in the dialog editor, and adding code for when it
+	gets pressed. When it get's pressed, it changes the cursor, does 
+	some other stuff and returns. The second part is handled when the 
+	user clicks the mouse. Then it sames the window, the hdc, and finally
+	asks for the pixel info. Once it does that, it restores the cursor
+	back to the old cursor.
+	
+Version 2.0 Jan 2005 CJ
+	Finished implementing support for floating point color spaces

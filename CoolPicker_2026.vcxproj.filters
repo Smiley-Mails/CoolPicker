@@ -1,0 +1,174 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="Source Files">
+      <UniqueIdentifier>{c417f3e7-3ae0-4318-834c-fbf1c53b4963}</UniqueIdentifier>
+      <Extensions>cpp;c;cxx;rc;def;r;odl;idl;hpj;bat</Extensions>
+    </Filter>
+    <Filter Include="Source Files\custom_controls">
+      <UniqueIdentifier>{287f8ef8-6fe6-4454-82f2-eecce6faef0d}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\conversion_functions">
+      <UniqueIdentifier>{6e66c03f-cb05-463c-bb63-ea236c6a17e4}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files">
+      <UniqueIdentifier>{da3715ae-7180-4023-bf79-372e9ced08fa}</UniqueIdentifier>
+      <Extensions>h;hpp;hxx;hm;inl</Extensions>
+    </Filter>
+    <Filter Include="Header Files\converson_functions">
+      <UniqueIdentifier>{0739824e-bcd8-4de5-8464-110a9c9398e6}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\globals">
+      <UniqueIdentifier>{3619058b-a54c-4b5f-9248-28ce8caa16fe}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\custom_controls">
+      <UniqueIdentifier>{8756763b-ef42-4991-9031-07a7cb780d08}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Resource Files">
+      <UniqueIdentifier>{0b1cf5cb-8c6d-4203-87a2-5363ba4b3af5}</UniqueIdentifier>
+      <Extensions>ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe</Extensions>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="CoolPicker\CoolPick.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="CoolPicker\CoolPicker.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="CoolPicker\CoolPickerDlg.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="CoolPicker\CoolPickerModelessDlg.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="CoolPicker\CoolPickerProcedure.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="CoolPicker\DllEntry.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="CoolPicker\MinMax.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="CoolPicker\misc_graphics_functions.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="CoolPicker\IColMode.cpp">
+      <Filter>Source Files\custom_controls</Filter>
+    </ClCompile>
+    <ClCompile Include="CoolPicker\IColRamp.cpp">
+      <Filter>Source Files\custom_controls</Filter>
+    </ClCompile>
+    <ClCompile Include="CoolPicker\IColSwatch.cpp">
+      <Filter>Source Files\custom_controls</Filter>
+    </ClCompile>
+    <ClCompile Include="CoolPicker\IPickerMixer.cpp">
+      <Filter>Source Files\custom_controls</Filter>
+    </ClCompile>
+    <ClCompile Include="CoolPicker\IPickerPlane.cpp">
+      <Filter>Source Files\custom_controls</Filter>
+    </ClCompile>
+    <ClCompile Include="CoolPicker\IPickerTriCircle.cpp">
+      <Filter>Source Files\custom_controls</Filter>
+    </ClCompile>
+    <ClCompile Include="CoolPicker\RGB_CMYK_ConversionFNS.cpp">
+      <Filter>Source Files\conversion_functions</Filter>
+    </ClCompile>
+    <ClCompile Include="CoolPicker\RGB_HSV_ConversionFNS.cpp">
+      <Filter>Source Files\conversion_functions</Filter>
+    </ClCompile>
+    <ClCompile Include="CoolPicker\RGB_LIQ_ConversionFNS.cpp">
+      <Filter>Source Files\conversion_functions</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="CoolPicker\CoolPick.def">
+      <Filter>Source Files</Filter>
+    </None>
+    <None Include="CoolPicker\resource\big.bmp">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="CoolPicker\resource\cursor1.cur">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="CoolPicker\resource\FlyingPot.gif">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="CoolPicker\resource\plane.bmp">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="CoolPicker\resource\setback.ico">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="version_history.txt" />
+    <None Include="README.md" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="CoolPicker\CoolPick.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="CoolPicker\CoolPicker.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="CoolPicker\CoolPickerDlg.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="CoolPicker\CoolPickerModelessDlg.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="CoolPicker\CoolPickerProcedure.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="CoolPicker\initialize_coolpick_windows.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="CoolPicker\MinMax.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="CoolPicker\misc_graphics_functions.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="CoolPicker\resource.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="CoolPicker\RGB_CMYK_ConversionFNS.h">
+      <Filter>Header Files\converson_functions</Filter>
+    </ClInclude>
+    <ClInclude Include="CoolPicker\RGB_HSV_ConversionFNS.h">
+      <Filter>Header Files\converson_functions</Filter>
+    </ClInclude>
+    <ClInclude Include="CoolPicker\RGB_LIQ_ConversionFNS.h">
+      <Filter>Header Files\converson_functions</Filter>
+    </ClInclude>
+    <ClInclude Include="CoolPicker\global_constants.h">
+      <Filter>Header Files\globals</Filter>
+    </ClInclude>
+    <ClInclude Include="CoolPicker\global_options.h">
+      <Filter>Header Files\globals</Filter>
+    </ClInclude>
+    <ClInclude Include="CoolPicker\IColMode.h">
+      <Filter>Header Files\custom_controls</Filter>
+    </ClInclude>
+    <ClInclude Include="CoolPicker\IColRamp.h">
+      <Filter>Header Files\custom_controls</Filter>
+    </ClInclude>
+    <ClInclude Include="CoolPicker\IColSwatch.h">
+      <Filter>Header Files\custom_controls</Filter>
+    </ClInclude>
+    <ClInclude Include="CoolPicker\IPickerMixer.h">
+      <Filter>Header Files\custom_controls</Filter>
+    </ClInclude>
+    <ClInclude Include="CoolPicker\IPickerPlane.h">
+      <Filter>Header Files\custom_controls</Filter>
+    </ClInclude>
+    <ClInclude Include="CoolPicker\IPickerTriCircle.h">
+      <Filter>Header Files\custom_controls</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <ResourceCompile Include="CoolPicker\CoolPick.rc">
+      <Filter>Resource Files</Filter>
+    </ResourceCompile>
+  </ItemGroup>
+</Project>
