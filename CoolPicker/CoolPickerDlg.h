@@ -70,11 +70,11 @@ public:
 
 	// Constructor
 	#if MAX_RELEASE >= 29000
-	// ПРИОРИТЕТ: Конструктор под Max 2027
+	// Max 2027
 		CoolPickerDlg(HWND hOwner, const AColor& col, ColorPicker::Flags flags, IPoint2* pos,
 			ColorPickerCallback* cb, const wchar_t* name, ColorContext context, int objClr = 0, CoolPickerModelessDlg* smp = NULL);
 	#else
-	// АДАПТАЦИЯ: Конструктор под Max 2026
+	// Max 2026, 2025, 2024
 		CoolPickerDlg(HWND hOwner, const AColor& col, IPoint2* pos,
 			HSVCallback* cb, const wchar_t* name, ColorContext context, int objClr = 0, CoolPickerModelessDlg* smp = NULL);
 	#endif
@@ -108,7 +108,7 @@ public:
 		void InstallNewCB(DWORD col, ColorPickerCallback* pcb, const wchar_t* name);
 		void InstallNewCB(AColor col, ColorPickerCallback* pcb, const wchar_t* name);
 	#else
-		// 3ds Max 2026
+		// 3ds Max 2026, 2025, 2024
 		void InstallNewCB(DWORD col, HSVCallback* pcb, const wchar_t* name);
 		void InstallNewCB(AColor col, HSVCallback* pcb, const wchar_t* name);
 	#endif

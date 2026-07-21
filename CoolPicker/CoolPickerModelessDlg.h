@@ -43,7 +43,7 @@ public:
 	void ModifyColor(AColor color);
 #else
 	// =========================================================================
-	// Max 2026
+	// Max 2026, 2025, 2024
 	// =========================================================================
 	CoolPickerModelessDlg(HWND hwndOwner, const AColor& initColor, IPoint2* pos,
 		HSVCallback* callback, const wchar_t* name, BOOL isObjectColor, ColorContext context);

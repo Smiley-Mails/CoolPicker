@@ -13,7 +13,7 @@ CoolPickerModelessDlg::~CoolPickerModelessDlg() {
 
 #if MAX_RELEASE >= 29000
 // =========================================================================
-// Max 2027 SDK
+// Max 2027
 // =========================================================================
 CoolPickerModelessDlg::CoolPickerModelessDlg(HWND hwndOwner, const AColor& initColor, ColorPicker::Flags flags, IPoint2* pos,
 	ColorPickerCallback* callback, const wchar_t* name, BOOL bModal, ColorContext context)
@@ -84,7 +84,7 @@ void CoolPickerModelessDlg::ModifyColor(AColor color) {
 }
 #else
 // =========================================================================
-// Max 2026 SDK
+// Max 2026, 2025, 2024
 // =========================================================================
 CoolPickerModelessDlg::CoolPickerModelessDlg(HWND hwndOwner, const AColor& initColor, IPoint2* pos,
 	HSVCallback* callback, const wchar_t* name, BOOL isObjectColor, ColorContext context)

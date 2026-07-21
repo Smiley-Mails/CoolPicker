@@ -363,7 +363,7 @@ IPoint2 CoolPickerDlg::initPos(354, 94);
 	}
 #else
 	// =========================================================================
-	// 3ds Max 2026
+	// Max 2026, 2025, 2024
 	// =========================================================================
 	void CoolPickerDlg::InstallNewCB(DWORD col, HSVCallback* pcb, const wchar_t* name)
 	{
